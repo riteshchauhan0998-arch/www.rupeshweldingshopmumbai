@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupesh Engineering Workshop - Mumbai</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f6f9; color: #333; }
+        
+        /* Navigation / Top Bar */
+        nav { background: #1e272e; color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        .logo { font-size: 22px; font-weight: bold; color: #ff9f43; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: 600; }
+        .nav-links a:hover { color: #ff9f43; }
+
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://unsplash.com') no-repeat center center/cover; color: white; padding: 60px 20px; text-align: center; border-radius: 10px; margin-bottom: 30px; }
+        .hero h2 { font-size: 36px; margin-bottom: 10px; color: #ff9f43; }
+        .hero p { font-size: 18px; opacity: 0.9; }
+
+        /* Services Section */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 40px; }
+        .service-card { background: white; padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid #ff9f43; }
+        .service-card h4 { margin-bottom: 10px; color: #1e272e; }
+
+        /* Management System Split */
+        .main-content { display: grid; grid-template-columns: 1fr 2fr; gap: 25px; margin-bottom: 40px; }
+        @media (max-width: 768px) { .main-content { grid-template-columns: 1fr; } }
+        
+        .form-section, .list-section { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .section-title { font-size: 20px; margin-bottom: 15px; color: #1e272e; border-bottom: 2px solid #ff9f43; padding-bottom: 8px; }
+        
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 14px; }
+        .form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        
+        button { width: 100%; padding: 12px; background: #ff9f43; border: none; color: white; font-weight: bold; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #f39c12; }
+
+        /* Table */
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background-color: #f8f9fa; color: #1e272e; }
+        .badge { padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; }
+        .badge.completed { background: #d4edda; color: #155724; }
+        .badge.pending { background: #fff3cd; color: #856404; }
+        .empty-msg { text-align: center; color: #888; padding: 20px; font-style: italic; }
+
+        /* Contact & Footer Section */
+        .contact-section { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px; }
+        @media (max-width: 768px) { .contact-section { grid-template-columns: 1fr; } }
+        
+        .contact-info h3 { margin-bottom: 15px; color: #1e272e; }
+        .contact-info p { margin-bottom: 10px; font-size: 15px; }
+        .contact-info strong { color: #ff9f43; }
+        
+        .map-container iframe { width: 100%; height: 250px; border: 0; border-radius: 8px; }
+        
+        footer { background: #1e272e; color: white; text-align: center; padding: 20px; border-radius: 10px 10px 0 0; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav>
+        <!-- 🔴 बदलें: अगर आप शॉर्ट नाम बदलना चाहें, तो यहाँ बदलें -->
+        <div class="logo">🛠️ Rupesh Engineering</div>
+        <div class="nav-links">
+            <a href="#services">हमारी सेवाएँ</a>
+            <a href="#register">ऑर्डर रजिस्टर</a>
+            <a href="#contact">सम्पर्क करें</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Banner -->
+        <div class="hero">
+            <!-- 🔴 बदलें: अपनी वर्कशॉप का पूरा नाम यहाँ लिखें -->
+            <h2>Rupesh Engineering Workshop, Mumbai</h2>
+            <p>मजबूत वेल्डिंग और फैब्रिकेशन का भरोसा </p>
+        </div>
+
+        <!-- Services Section -->
+        <div id="services">
+            <h3 class="section-title">🛠️ हमारी मुख्य सेवाएँ (Our Services)</h3>
+            <div class="services-grid">
+                <div class="service-card"><h4>Grill & Gate Welding</h4><p>मजबूत लोहे के गेट और ग्रिल का काम</p></div>
+                <div class="service-card"><h4>Shutter Repair</h4><p>दुकानों के रोलिंग शटर की मरम्मत</p></div>
+                <div class="service-card"><h4>SS Railing Fabrication</h4><p>स्टेनलेस STEEL रेलिंग डिज़ाइन और फिटिंग</p></div>
+                <div class="service-card"><h4>Structural Welding</h4><p>हैवी फैब्रिकेशन और वेल्डिंग वर्क्स</p></div>
+            </div>
+        </div>
+
+        <!-- Management Register Section -->
+        <div class="main-content" id="register">
+            <div class="form-section">
+                <h2 class="section-title">➕ नया ऑर्डर जोड़ें</h2>
+                <form id="job-form">
+                    <div class="form-group"><label>ग्राहक का नाम</label><input type="text" id="cust-name" placeholder="ग्राहक का नाम लिखें" required></div>
+                    <div class="form-group"><label>काम का प्रकार</label><input type="text" id="job-type" placeholder="उदा. Gate Welding" required></div>
+                    <div class="form-group"><label>कुल रकम (₹)</label><input type="number" id="job-amount" placeholder="रकम भरें" required></div>
+                    <div class="form-group">
+                        <label>स्टेटस</label>
+                        <select id="job-status">
+                            <option value="Pending">🟡 Pending (बाकी है)</option>
+                            <option value="Completed">🟢 Completed (पूरा हुआ)</option>
+                        </select>
+                    </div>
+                    <button type="submit">ऑर्डर सेव करें</button>
+                </form>
+            </div>
+
+            <div class="list-section">
+                <h2 class="section-title">📋 लाइव ऑर्डर रजिस्टर</h2>
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr><th>ग्राहक</th><th>काम</th><th>रकम</th><th>स्टेटस</th></tr>
+                        </thead>
+                        <tbody id="jobs-table-body">
+                            <!-- डेटा यहाँ लाइव आएगा -->
+                        </tbody>
+                    </table>
+                    <div id="no-data-msg" class="empty-msg">अभी रजिस्टर में कोई ऑर्डर नहीं है। नया ऑर्डर जोड़ें!</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Real Website Contact Details Section -->
+        <div class="contact-section" id="contact">
+            <div class="contact-info">
+                <h3>📞 सम्पर्क विवरण (Contact Details)</h3>
+                
+                <!-- 🔴 बदलें: यहाँ अपना असली मोबाइल नंबर डालें -->
+                <p><strong>फ़ोन नंबर:</strong> +91 9936698911 / +91 9569805711</p>
+                
+                <!-- 🔴 बदलें: यहाँ अपनी असली ईमेल आईडी डालें -->
+                <p><strong>ईमेल:</strong> riteshchauhan0998@gmil.com</p>
+                
+                <!-- 🔴 बदलें: यहाँ अपनी वर्कशॉप का असली और पूरा पता लिखें -->
+                <p><strong>वर्कशॉप का पता:</strong> Shop no 01,Moiya modh,Nizamabad, Azamgarh-223227</p>
+                
+                <!-- 🔴 बदलें: दुकान खुलने और बंद होने का समय यहाँ लिखें -->
+                <p><strong>काम का समय:</strong> सुबह 09:00 बजे से रात 08:00 बजे तक (रविवार बंद)</p>
+            </div>
+            
+            <!-- Google Map -->
+            <div class="map-container">
+                <!-- 🔴 बदलें: भविष्य में अगर आप चाहें, तो अपने दुकान की लोकेशन का Google Map लिंक इस src="" के अंदर डाल सकते हैं -->
+                <iframe src="https://maps.app.goo.gl/b8pUUhZs78si7B956"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <!-- 🔴 बदलें: कॉपीराइट ईयर और अपनी दुकान का नाम यहाँ भी बदल सकते हैं -->
+        <p>© 2026 Rupesh Engineering Workshop, Mumbai. सर्वाधिकार सुरक्षित।</p>
+    </footer>
+
+    <script>
+        // पुराना डेमो नाम वाला डेटा पूरी तरह से डिलीट कर दिया गया है (अब यह खाली है)
+        let orders = [];
+
+        function updateApp() {
+            const tableBody = document.getElementById('jobs-table-body');
+            const noDataMsg = document.getElementById('no-data-msg');
+            
+            tableBody.innerHTML = '';
+            
+            if (orders.length === 0) {
+                noDataMsg.style.display = 'block';
+            } else {
+                noDataMsg.style.display = 'none';
+                orders.forEach(order => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td><strong>${order.customer}</strong></td>
+                        <td>${order.type}</td>
+                        <td>₹${order.amount}</td>
